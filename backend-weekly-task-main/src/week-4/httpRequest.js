@@ -15,6 +15,7 @@ let request = https.get ('https://jsonplaceholder.typicode.com/users', (res) => 
     res.on('close', () => {
         data = JSON.parse(data);
         console.log('retrieved all data')
+        console.log(JSON.parse(data));
 
         for(let i = 0; i < data.length; i++) {
             console.log(data[i].name);
